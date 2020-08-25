@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>love line with Mrs.Ma</title>
+
+<style type="text/css">Ma
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- <embed src="http://p3qhnc0eg.bkt.clouddn.com/U%20are%20so%20beautiful.mp3" width="0" height="0" loop="-1" autostart="true"> </embed> -->
+<embed src="http://other.web.ri01.sycdn.kuwo.cn/resource/n3/19/68/2405391895.mp3" width="0" height="0" loop="-1" autostart="true"> </embed>
+
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+        	从银河到地球,我们路过人间<br />
+			从青涩到成熟,我们路过爱情<br />
+			一路走过,感谢遇见<br />
+			我会守护你生命里的精彩,陪伴你一路精彩下去<br />
+			我会带你去所有你想去的地方<br />
+			陪你闹看你笑<br />
+			历经你生命中所有的点点滴滴。<br />
+			我期待这一生与你一起走过<br />
+			走到尽头再回头看尽一生铅华满地<br />
+			我期待与你慢慢变老<br />
+			等我们老到哪儿也去不了<br />
+			还能满载着一生的幸福快乐<br />
+			我愿爱你直至老去<br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					相遇，相识，相恋...
+					<div id="elapseClock"></div>
+				</div>
+			<div id="loveu">
+					Love u forever and ever.
+					<br/>
+					<div class="signature">- 杨先森</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+together.setFullYear(2019, 6, 23);//1.23；3.29
+together.setHours(12);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+<!-- <p>Made for Mrs.Right, made by <a href="https://github.com/enfangzhong" target="_blank">EnfangZhong<a /></p>
+<p>Copyright © 2017 - 2019. All Rights Reserved. Designed by <a href="https://github.com/enfangzhong" target="_blank">EnfangZhong<a /> </p>
+ --></div>
+</body>
+</html>
